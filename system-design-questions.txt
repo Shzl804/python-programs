@@ -1,0 +1,219 @@
+SYSTEM DESIGN SELF-ASSESSMENT — 100 QUESTIONS
+===============================================
+
+Profile: Intermediate learner
+Use with: system-design-roadmap.md
+Rule: Attempt each question before opening the linked material.
+Score each answer from 0 to 4:
+0 = cannot explain
+1 = definition only
+2 = definition plus example
+3 = applies it in a design and explains trade-offs
+4 = can design, implement, troubleshoot, and compare alternatives
+
+General answer resources
+-------------------------
+System Design Primer:
+https://github.com/donnemartin/system-design-primer
+Gaurav Sen / InterviewReady:
+https://interviewready.io/system-design-notes
+Gaurav Sen playlist index:
+https://tutorialtube.online/playlist/system-design-playlist/
+ByteByteGo:
+https://www.youtube.com/@ByteByteGo
+Exponent mock interviews:
+https://www.youtube.com/@tryexponent
+DDIA:
+https://dataintensive.net/
+
+SECTION 1 — FUNDAMENTALS AND ESTIMATION
+
+1. What is system design?
+2. What is the difference between HLD and LLD?
+3. What are functional requirements?
+4. What are non-functional requirements?
+5. What is scalability?
+6. What is the difference between performance and scalability?
+7. What is the difference between latency and throughput?
+8. What is availability?
+9. What is an SLA, SLO, and SLI?
+10. How do you estimate QPS, storage, and bandwidth?
+
+Practice videos:
+https://www.youtube.com/results?search_query=system+design+requirements+capacity+estimation+back+of+the+envelope
+
+SECTION 2 — ARCHITECTURE BASICS
+
+11. What is vertical scaling?
+12. What is horizontal scaling?
+13. Why are stateless services easier to scale?
+14. What is a single point of failure?
+15. What is fault tolerance?
+16. What is graceful degradation?
+17. What is capacity planning?
+18. What is a bottleneck?
+19. What is a modular monolith?
+20. What trade-offs must every system designer consider?
+
+Practice videos:
+https://www.youtube.com/results?search_query=Gaurav+Sen+horizontal+vertical+scaling+system+design
+
+SECTION 3 — NETWORKING AND APIS
+
+21. What happens after entering a URL in a browser?
+22. What is DNS and why is DNS caching used?
+23. What is the difference between TCP and UDP?
+24. What is HTTP?
+25. What improvements did HTTP/2 introduce?
+26. What is HTTP/3?
+27. What is TLS?
+28. What is a reverse proxy?
+29. What is a CDN?
+30. What is REST?
+31. What is gRPC?
+32. When would you use WebSockets?
+33. What is polling and long polling?
+34. What is an API gateway?
+35. What is API versioning?
+36. What is pagination?
+37. What is idempotency?
+38. How should APIs handle timeouts and retries?
+39. What is connection pooling?
+40. How would you secure a public API?
+
+Practice videos and material:
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+https://www.youtube.com/@hnasr
+https://www.youtube.com/results?search_query=system+design+DNS+HTTP+TCP+UDP+API+gateway
+
+SECTION 4 — DATABASES AND STORAGE
+
+41. When should you use a relational database?
+42. When should you use a NoSQL database?
+43. What is normalization?
+44. What is denormalization?
+45. What is an index?
+46. How do indexes affect writes?
+47. What are ACID properties?
+48. What is a transaction?
+49. What is optimistic locking?
+50. What is pessimistic locking?
+51. What is primary-replica replication?
+52. What is synchronous replication?
+53. What is asynchronous replication?
+54. What is replication lag?
+55. What is partitioning?
+56. What is sharding?
+57. How do you choose a shard key?
+58. What is a hot shard?
+59. What is consistent hashing?
+60. How would you migrate a large database with minimal downtime?
+
+Practice videos and material:
+https://dataintensive.net/
+https://www.postgresql.org/docs/current/tutorial.html
+https://www.mongodb.com/docs/manual/core/data-modeling-introduction/
+https://www.youtube.com/results?search_query=system+design+database+replication+partitioning+sharding+consistent+hashing
+
+SECTION 5 — CONSISTENCY AND DISTRIBUTED SYSTEMS
+
+61. Explain the CAP theorem.
+62. What is strong consistency?
+63. What is eventual consistency?
+64. What is read-after-write consistency?
+65. What is causal consistency?
+66. What is quorum consistency?
+67. What is a network partition?
+68. Why is exactly-once processing difficult?
+69. What is at-least-once delivery?
+70. What is at-most-once delivery?
+71. Why must consumers be idempotent?
+72. What is a distributed lock?
+73. Why are clocks difficult in distributed systems?
+74. What is leader election?
+75. What is consensus?
+76. How would you prevent duplicate payments?
+77. How would you handle conflicting updates?
+78. When is eventual consistency acceptable?
+79. How can a distributed system recover after a node failure?
+80. What is disaster recovery?
+
+Practice videos and material:
+https://www.youtube.com/results?search_query=system+design+CAP+theorem+eventual+consistency+quorum
+https://www.youtube.com/results?search_query=distributed+systems+consensus+leader+election+idempotency
+https://dataintensive.net/
+
+SECTION 6 — CACHING AND SCALING
+
+81. What is cache-aside?
+82. What is read-through caching?
+83. What is write-through caching?
+84. What is write-back caching?
+85. What is write-around caching?
+86. What is TTL?
+87. Compare LRU and LFU.
+88. What is cache invalidation?
+89. What is a cache stampede?
+90. What is a hot key?
+91. How should a system behave when the cache is unavailable?
+92. What is load balancing?
+93. Compare round-robin and least-connections routing.
+94. What is a health check?
+95. What is rate limiting?
+96. Compare token bucket and leaky bucket.
+97. What is a circuit breaker?
+98. What is backpressure?
+99. How would you scale a read-heavy application?
+100. How would you keep a system available during a regional outage?
+
+Practice videos and material:
+https://redis.io/docs/latest/develop/
+https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/
+https://www.youtube.com/results?search_query=ByteByteGo+caching+cache+invalidation+LRU+rate+limiter
+https://www.youtube.com/results?search_query=Gaurav+Sen+load+balancing+system+design
+
+CANONICAL DESIGN QUESTIONS WITH ANSWER WALKTHROUGHS
+===================================================
+
+These are additional full-system exercises. Attempt each in 45 minutes, then compare with a video answer.
+
+URL shortener:
+https://www.youtube.com/results?search_query=URL+shortener+system+design+interview+answer
+Netflix:
+https://www.youtube.com/results?search_query=Netflix+system+design+interview+answer
+YouTube:
+https://www.youtube.com/results?search_query=YouTube+system+design+interview+answer
+WhatsApp:
+https://www.youtube.com/results?search_query=WhatsApp+system+design+interview+answer
+Uber:
+https://www.youtube.com/results?search_query=Uber+system+design+interview+answer
+Instagram:
+https://www.youtube.com/results?search_query=Instagram+system+design+interview+answer
+Twitter/X:
+https://www.youtube.com/results?search_query=Twitter+news+feed+system+design+interview+answer
+Dropbox:
+https://www.youtube.com/results?search_query=Dropbox+system+design+interview+answer
+Payment system:
+https://www.youtube.com/results?search_query=payment+system+design+interview+idempotency+answer
+Autocomplete:
+https://www.youtube.com/results?search_query=autocomplete+system+design+interview+answer
+
+READINESS CHECK
+==============
+
+Score each question from 0 to 4. A total of 300 or more is a strong intermediate result. Also complete at least eight timed designs. Every design should include:
+
+- requirements and assumptions
+- traffic, storage, and bandwidth estimates
+- APIs
+- data model
+- high-level architecture
+- database and cache choices
+- consistency model
+- scaling plan
+- failure recovery
+- security
+- monitoring and alerting
+- cost and trade-offs
+
+Important: YouTube answer videos are learning references, not proof of mastery. If you cannot produce the design before watching the answer, repeat the problem after 48 hours without looking at the solution.
